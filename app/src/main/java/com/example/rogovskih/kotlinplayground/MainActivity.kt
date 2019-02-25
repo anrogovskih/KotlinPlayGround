@@ -5,6 +5,7 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu
 import android.view.MenuItem
+import com.example.rogovskih.kotlinplayground.aquarium.Aquarium
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -15,10 +16,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
+        buildAquarium()
+
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+    }
+
+    private fun buildAquarium() {
+        val aquarium = Aquarium()
+        aquarium.height = 80
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
