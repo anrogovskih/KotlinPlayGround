@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun buildAquarium() {
-        val aquarium = Aquarium()
+        val aquarium = Aquarium(numberOfFish = 10)
         aquarium.height = 80
     }
 
